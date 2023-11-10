@@ -1,0 +1,39 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Yury Olshanskiy
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+author:
+  name:           'Yury Olshanskiy'
+  title:          'PhD Candidate in Finance'
+  university:     'MIT Sloan'
+  email:           ols@mit.edu
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+  
+# Gems
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+
+gems: [jekyll-gist]
+
+# Collections
+collections:
+  animals:
+    output: true

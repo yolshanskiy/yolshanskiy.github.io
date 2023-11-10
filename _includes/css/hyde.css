@@ -1,0 +1,375 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/hyde.
+ */
+
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+ font-family: 'Roboto', sans-serif;
+ font-size: 18px;
+}
+@media (min-width: 62em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  background-color: #202020;
+  bottom: 0;
+}
+@media (min-width: 62em) {
+  .sidebar {
+	padding-top: 3rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 31.7vw;
+    text-align: right;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+color: #5375a3;
+}
+
+/* About section */
+.sidebar-about h1{
+  margin-top: 0.5rem;
+  font-size: 26px;
+}
+
+.sidebar-about a{
+color: #000000;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  display: block;
+  line-height: 1.5;
+  color: #5375a3;
+  font-weight: bold;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: none;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 62em) {
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    bottom: 1rem;
+    left:   1rem;
+  }
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top:    1rem;
+  padding-bottom: 4rem;
+  color: #000000;
+}
+
+@media (min-width: 62em) {
+  .content {
+	padding-top: 3rem;
+    max-width: 48rem;
+    margin-left: 31.7vw;
+    margin-right: 2rem;
+	color: #000000;
+  }
+}
+
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` on the right.
+ */
+
+@media (min-width: 62em) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 31.7vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 31.7vw;
+  }
+}
+
+
+
+/*
+ * Themes
+ *
+ * As of v1.1, Hyde includes optional themes to color the sidebar and links
+ * within blog posts. To use, add the class of your choosing to the `body`.
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* Red */
+.theme-base-08 .sidebar {
+  background-color: #ac4142;
+}
+.theme-base-08 .content a,
+.theme-base-08 .related-posts li a:hover {
+  color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .sidebar {
+  background-color: #ffffff;
+}
+.theme-base-09 .related-posts li a:hover {
+  color: #000000;
+}
+
+/* Yellow */
+.theme-base-0a .sidebar {
+  background-color: #f4bf75;
+}
+.theme-base-0a .content a,
+.theme-base-0a .related-posts li a:hover {
+  color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .sidebar {
+  background-color: #90a959;
+}
+.theme-base-0b .content a,
+.theme-base-0b .related-posts li a:hover {
+  color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .sidebar {
+  background-color: #75b5aa;
+}
+.theme-base-0c .content a,
+.theme-base-0c .related-posts li a:hover {
+  color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .sidebar {
+  background-color: #5375a3;
+}
+.theme-base-0d .content a,
+.theme-base-0d .related-posts li a:hover {
+  color: #5375a3;
+}
+
+/* Magenta */
+.theme-base-0e .sidebar {
+  background-color: #aa759f;
+}
+.theme-base-0e .content a,
+.theme-base-0e .related-posts li a:hover {
+  color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .sidebar {
+  background-color: #8f5536;
+}
+.theme-base-0f .content a,
+.theme-base-0f .related-posts li a:hover {
+  color: #8f5536;
+}
+
+::-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #c5c5c5 #f6f6f6;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 14px;
+        height: 14px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #f6f6f6;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #c5c5c5;
+        border-radius: 30px;
+        border: 3px solid #f6f6f6;
+    }
+
+.intro {
+  margin-top: 0 rem;
+  margin-bottom: 1.5rem;
+}
+
+.paper-type{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.paper-description{
+  margin-left: 0rem;
+  margin-bottom: 1rem;
+}
+
+.paper-title {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+
+.paper-coauthors {
+  font-weight: normal;
+  color: #000000;
+}
+
+.paper-journal {
+  font-style: italic;
+}
+
+.paper-link-line
+{
+  margin-top: 0rem;
+}
+
+.paper-abstract
+{
+  font-style: italic;
+}
+
+.paper-links {
+  margin-top: 0rem;
+  color: #5375a3;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.error-code {
+margin-top: 1rem;
+text-align: center;
+font-size: 80px;
+font-weight: bold;
+}
+
+.error-text {
+text-align: center;
+font-size: 26px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.error-try {
+margin-top: 2rem;
+text-align: center;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #ffffff;
+  color: #5375a3;
+  cursor: pointer;
+  border: none;
+  padding-left: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-right: 0.25rem;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content-collapsible {
+  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.content-margins {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem
+}
